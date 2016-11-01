@@ -1,0 +1,4 @@
+color scheme: green
+test value: nothing
+
+other value: None

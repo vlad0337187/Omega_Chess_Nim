@@ -1,0 +1,1 @@
+/home/vlad/Programs/programming/libraries/Nim/ngtk3/nim-pango/src/pango.nim

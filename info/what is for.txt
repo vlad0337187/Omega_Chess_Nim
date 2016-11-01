@@ -1,0 +1,6 @@
+nim.cfg
+	"""Needed to configure project."""
+	
+	path:"$projectdir"
+		"""Needed for Gtk wrappers to see each other."""
+	
