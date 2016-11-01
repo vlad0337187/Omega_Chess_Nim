@@ -8,6 +8,14 @@ Here types for settings are enumerated.
 
 
 
+const default_settings = """
+color scheme: green
+test value: nothing
+"""
+
+
+
+
 type type_color_scheme {.pure.} =
 	#[general - as on wikipedia (brown light, brown dark),
 	classic - black and white,
@@ -16,7 +24,6 @@ type type_color_scheme {.pure.} =
 	]#
 	enum general, classic, gray, green
 
-var color_scheme: type_color_scheme
 
 
 
@@ -25,4 +32,10 @@ type type_test_value {.pure.} =
 	#[just a value for testing]#
 	enum test1, test2, nothing
 
-var test_value: type_test_value
+
+
+
+
+var
+	color_scheme *: type_color_scheme
+	test_value *: type_test_value

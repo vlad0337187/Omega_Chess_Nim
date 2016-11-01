@@ -3,4 +3,8 @@ nim.cfg
 	
 	path:"$projectdir"
 		"""Needed for Gtk wrappers to see each other."""
-	
+
+/modules
+	/settings
+		settings.nim
+			"""Needed to read settings from file in /settings"""
