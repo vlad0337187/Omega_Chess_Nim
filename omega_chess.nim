@@ -2,5 +2,12 @@
 # Main file, which starts other files.
 
 
-import gui/gtk3, gui/gdk_pixbuf  # for GUI
-import modules/settings/settings
+
+
+import os  # for working with directories.
+# uses: settings.nim, board_cells.nim, etc
+
+import ./sources/settings/settings
+
+
+include ./sources/gui/window.nim

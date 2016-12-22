@@ -1,2 +1,7 @@
+# Lines, started with "#" are ignored. They are used for tips.
+
 color scheme: green
+# availible values: general, classic, gray, green
+
 test value: nothing
+# availible values: test1, test2, nothing
