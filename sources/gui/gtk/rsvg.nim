@@ -5,6 +5,7 @@
 from gobject import GObject, GType, GObjectObj, GObjectClassObj
 from glib import GError
 from gdk_pixbuf import GdkPixbuf
+from cairo import Surface
 
 
 when defined(windows):
@@ -21,7 +22,9 @@ else:
 
 
 type
-	RsvgHandle* = object of GObject
+	RsvgHandle* = ptr RsvgHandleObj
+	RsvgHandlePtr* = ptr RsvgHandleObj
+	RsvgHandleObj* = object
 
 
 
@@ -34,3 +37,4 @@ proc rsvgHandleClose* (handle: RsvgHandle, error: GError):  bool  {.importc: "rs
 
 
 proc rsvgHandleGetPixbuf* (handle: RsvgHandle): GdkPixbuf {.importc: "rsvg_handle_get_pixbuf", librsvg.}
+proc rsvgHandleRenderCairo* (handle: RsvgHandle, surface: Surface): bool {.importc: "rsvg_handle_render_cairo", librsvg.}
