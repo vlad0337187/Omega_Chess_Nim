@@ -106,7 +106,7 @@ for line in 1..12:
 		var index = receive_cell_index_from_line_row(line, row)
 
 		pseudobuttons_cells[index] = new(pseudobutton_type)
-		pseudobuttons_cells[index].image = gtk3.newImage()
+		pseudobuttons_cells[index].button = gtk3.newEventBox()
 
 		gtk3.attach(board_grid_highlights, pseudobuttons_cells[index].button, cint(line-1), cint(row-1), cint(1), cint(1))
 
